@@ -1,0 +1,22 @@
+row=5;col=4
+
+m=[[1,2,3,1],[4,3,2,1],[1,2,4,5],[4,3,2,6],[1,2,7,4]]
+max_row_sum=0; max_sum_row_idx=-1
+max_col_sum=0; max_sum_col_idx=-1
+for i in  range(row):
+    sum=0
+    for j in range(col):
+        sum=sum+m[i][j]
+    if (sum>max_row_sum):
+        max_row_sum=sum
+        max_sum_row_idx=i
+
+print("maximum row index:",max_sum_row_idx)
+for i in  range(col):
+    sum=0
+    for j in range(row):
+        sum=sum+m[j][i]
+    if (sum>max_col_sum):
+        max_col_sum=sum
+        max_sum_col_idx=i
+print("maximum coloum index:",max_sum_col_idx)
